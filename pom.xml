@@ -6,7 +6,11 @@
 
     <groupId>ru.geekbrains</groupId>
     <artifactId>JAVA_2_Homeworks</artifactId>
+    <packaging>pom</packaging>
     <version>1</version>
+    <modules>
+        <module>chat</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -36,19 +40,8 @@
     </dependencies>
 
 
-
-
-
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>14</source>
-                    <target>14</target>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

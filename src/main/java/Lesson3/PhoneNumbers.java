@@ -1,7 +1,5 @@
 package Lesson3;
 
-import com.sun.source.tree.Tree;
-
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.TreeSet;
