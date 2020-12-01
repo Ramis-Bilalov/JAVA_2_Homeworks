@@ -32,7 +32,7 @@ public class Test {
         System.out.println("1. Время выполнения без разбивки массива = " + (b-a) + " миллисекунд");
     }
 
-    public static void breakUpArray() {
+    public static void breakUpArray() throws InterruptedException {
 
         Arrays.fill(arr, 1);
         long a = System.currentTimeMillis();
@@ -56,6 +56,8 @@ public class Test {
         Thread t2 = new Thread(newValueSecondHalf);
         t1.start();
         t2.start();
+        t1.join();
+        t2.join();
 
         System.arraycopy(a1, 0, arr, 0, 5_000_000);
         System.arraycopy(a2, 0, arr, 5_000_000, 5_000_000);
@@ -65,7 +67,7 @@ public class Test {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         calculateTime();
         breakUpArray();
     }
