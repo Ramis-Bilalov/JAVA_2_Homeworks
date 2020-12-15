@@ -29,7 +29,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Button layoutX="266.0" layoutY="200.0" mnemonicParsing="false" onAction="#enter" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: #ffffff;" text="Sign in">
+            <Button onAction="#enter" layoutX="266.0" layoutY="200.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: #ffffff;" text="Sign in">
                <font>
                   <Font name="Segoe Print Bold" size="14.0" />
                </font>

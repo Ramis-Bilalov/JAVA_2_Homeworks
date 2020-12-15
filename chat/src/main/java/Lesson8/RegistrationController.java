@@ -11,17 +11,17 @@ import java.io.IOException;
 
 public class RegistrationController {
 
-    public TextField login;
-    public TextField password;
+    public TextField login1;
+    public TextField password1;
 
     public void enter(ActionEvent actionEvent) throws IOException {
-        MockAuthServiceImpl.getInstance().addUser(login.getText(), password.getText());
+        MockAuthServiceImpl.getInstance().addUser(login1.getText(), password1.getText());
         Parent chat = FXMLLoader.load(getClass().getResource("auth.fxml"));
         Stage stage = new Stage();
-        stage.setTitle("Сетевой чат");
+        stage.setTitle("Вход");
         stage.setScene(new Scene(chat));
         stage.setResizable(false);
         stage.show();
-        login.getScene().getWindow().hide();
+        login1.getScene().getWindow().hide();
     }
 }

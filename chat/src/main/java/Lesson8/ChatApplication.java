@@ -11,7 +11,7 @@ public class ChatApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent auth = FXMLLoader.load(getClass().getResource("auth.fxml"));
-        primaryStage.setTitle("Чат");
+        primaryStage.setTitle("Вход в аккаунт");
         primaryStage.setScene(new Scene(auth));
         primaryStage.setResizable(false);
         primaryStage.show();

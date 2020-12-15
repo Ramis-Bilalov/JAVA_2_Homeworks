@@ -17,6 +17,7 @@ public class AuthController {
         boolean auth = MockAuthServiceImpl.getInstance()
                 .auth(login.getText(), password.getText());
         if (auth) {
+            System.out.println("правильный пароль");
             Parent chat = FXMLLoader.load(getClass().getResource("chat.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Сетевой чат");
@@ -25,6 +26,7 @@ public class AuthController {
             stage.show();
             login.getScene().getWindow().hide();
         } else {
+            System.out.println("неправильный пароль");
             login.clear();
             login.setPromptText("WRONG LOGIN");
             password.clear();
@@ -33,7 +35,7 @@ public class AuthController {
     }
 
     public void reg(ActionEvent actionEvent) throws IOException {
-        MockAuthServiceImpl.getInstance().addUser(login.getText(), password.getText());
+        //MockAuthServiceImpl.getInstance().addUser(login.getText(), password.getText());
         Parent chat = FXMLLoader.load(getClass().getResource("registration.fxml"));
         Stage stage = new Stage();
         stage.setTitle("Регистрация");
