@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="288.0" prefWidth="477.0" style="-fx-background-color: #8FBC8F;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Lesson8.RegistrationController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="15.0" prefHeight="259.0" prefWidth="450.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #556B2F;">
+         <children>
+            <TextField fx:id="login1" layoutX="197.0" layoutY="79.0" prefHeight="34.0" prefWidth="216.0" promptText="Введите логин" />
+            <TextField fx:id="password1" layoutX="199.0" layoutY="127.0" onAction="#enter" prefHeight="34.0" prefWidth="216.0" promptText="Введите пароль" />
+            <Label layoutX="215.0" layoutY="-9.0" prefHeight="46.0" prefWidth="183.0" style="-fx-background-color: #8FBC8F; -fx-background-radius: 10; -fx-border-radius: 10;" text="  Registration" textAlignment="CENTER">
+               <font>
+                  <Font name="Segoe Print Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="117.0" layoutY="85.0" text=" Логин">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="114.0" layoutY="133.0" text="Пароль">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button onAction="#enter" layoutX="225.0" layoutY="169.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Registrate">
+               <font>
+                  <Font name="Segoe Print Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
