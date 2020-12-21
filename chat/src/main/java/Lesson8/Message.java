@@ -48,8 +48,9 @@ public class Message implements Serializable {
 
     @Override
     public String toString() {
-        if(author.endsWith("1")) {
-            return String.format("\t\t\t\t\t\t" + "%s %s: %s\n", format.format(sendAt), author, message);
-        } return String.format("%s %s: %s\n", format.format(sendAt), author, message);
+//        if(author.endsWith("1")) {
+//            return String.format("\t\t\t\t\t\t" + "%s %s: %s\n", format.format(sendAt), author, message);
+//        }
+        return String.format("%s %s: %s\n", format.format(sendAt), author, message);
     }
 }

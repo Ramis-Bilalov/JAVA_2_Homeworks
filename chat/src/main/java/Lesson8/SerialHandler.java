@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class SerialHandler implements Closeable, Runnable {
 
@@ -15,6 +17,8 @@ public class SerialHandler implements Closeable, Runnable {
     private boolean running;
     private final byte [] buffer;
     private final EchoServer server;
+    private ChatController chatController;
+
 
     public SerialHandler(Socket socket, EchoServer server) throws IOException {
         System.out.println("1");
@@ -43,7 +47,14 @@ public class SerialHandler implements Closeable, Runnable {
     public void run() {
         while (running) {
             try {
+                try {
+                    UsersSQLiteDao userDao = new UsersSQLiteDao();
+                    userName = userDao.getNickname();
+                } catch (NullPointerException | SQLException s) {
+                    s.printStackTrace();
+                }
                 Message message = (Message) is.readObject();
+
                 if (message.getMessage().startsWith("/changeNick")) {
                     String[] data = message.getMessage().split(" ");
                     String oldName = userName;

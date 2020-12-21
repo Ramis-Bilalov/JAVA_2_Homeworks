@@ -1,5 +1,6 @@
 package Lesson8;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,8 +23,8 @@ public class ChatController implements Initializable {
     private CharReader reader;
 
 
-    public TextField getChatName() {
-        return chatName;
+    public String getChatName() {               // изменено
+        return chatName.getText();
     }
 
     public String getUserName() {
@@ -45,7 +46,7 @@ public class ChatController implements Initializable {
     public void quit(ActionEvent actionEvent) throws IOException {
         Parent chat = FXMLLoader.load(getClass().getResource("auth.fxml"));
         Stage stage = new Stage();
-        stage.setTitle("Вход");
+        stage.setTitle("Вход в аккаунт");
         stage.setScene(new Scene(chat));
         stage.setResizable(false);
         stage.show();

@@ -12,6 +12,10 @@ public class MockAuthServiceImpl implements AuthService {
         userDao.put("user", "pass");
     }
 
+    public HashMap<String, String> getUserDao() {
+        return userDao;
+    }
+
     public static MockAuthServiceImpl getInstance() {
         if (instance == null) {
             instance = new MockAuthServiceImpl();
@@ -24,14 +28,8 @@ public class MockAuthServiceImpl implements AuthService {
         userDao.put(name, pass);
     }
 
-    public boolean checkPass(String name, String pass) {
-        return userDao.get(pass) != null;
-
-    }
-
     @Override
     public boolean auth(String name, String pass) {
-        return userDao.get(name) != null;
-
+        return userDao.containsKey(name) && userDao.containsValue(pass);
     }
 }

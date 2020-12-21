@@ -3,6 +3,7 @@ package Lesson8;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class EchoServer {
@@ -55,7 +56,7 @@ public class EchoServer {
         clients.remove(client);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException, InterruptedException {
         new EchoServer();
     }
 }

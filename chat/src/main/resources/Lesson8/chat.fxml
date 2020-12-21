@@ -4,11 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="600.0" prefWidth="567.0" style="-fx-background-color: #8FBC8F;"
-            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Lesson8.ChatController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="567.0" style="-fx-background-color: #4682B4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Lesson8.ChatController">
    <children>
       <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="34.0" prefWidth="538.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #556B2F;">
          <children>
@@ -21,8 +17,6 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <TextField fx:id="chatName" layoutX="442.0" layoutY="4.0" prefHeight="26.0" prefWidth="91.0" style="-fx-background-radius: 8; -fx-border-radius: 8;" />
-            <Label layoutX="400.0" layoutY="8.0" text="Name:" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="60.0" prefHeight="525.0" prefWidth="538.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #556B2F;">
